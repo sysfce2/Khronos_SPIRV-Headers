@@ -14595,6 +14595,12 @@
           "capabilities" : [ "Linkage" ],
           "extensions" : [ "SPV_KHR_linkonce_odr" ],
           "version" : "None"
+        },
+        {
+          "enumerant" : "WeakAMD",
+          "value" : 3,
+          "capabilities" : [ "WeakLinkageAMD" ],
+          "version" : "None"
         }
       ]
     },
@@ -17742,6 +17748,13 @@
           "value" : 5156,
           "extensions" : [ "SPV_KHR_poison_freeze" ],
           "provisional" : true,
+          "version" : "None"
+        },
+        {
+          "enumerant" : "WeakLinkageAMD",
+          "value" : 5181,
+          "capabilities" : [ "Linkage" ],
+          "extensions" : [ "SPV_AMD_weak_linkage" ],
           "version" : "None"
         },
         {

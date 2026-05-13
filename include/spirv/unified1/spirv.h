@@ -475,6 +475,7 @@ typedef enum SpvLinkageType_ {
     SpvLinkageTypeExport = 0,
     SpvLinkageTypeImport = 1,
     SpvLinkageTypeLinkOnceODR = 2,
+    SpvLinkageTypeWeakAMD = 3,
     SpvLinkageTypeMax = 0x7fffffff,
 } SpvLinkageType;
 
@@ -1208,6 +1209,7 @@ typedef enum SpvCapability_ {
     SpvCapabilityDescriptorHeapEXT = 5128,
     SpvCapabilityConstantDataKHR = 5146,
     SpvCapabilityPoisonFreezeKHR = 5156,
+    SpvCapabilityWeakLinkageAMD = 5181,
     SpvCapabilitySampleMaskOverrideCoverageNV = 5249,
     SpvCapabilityGeometryShaderPassthroughNV = 5251,
     SpvCapabilityShaderViewportIndexLayerEXT = 5254,
@@ -3893,6 +3895,7 @@ inline const char* SpvLinkageTypeToString(SpvLinkageType value) {
     case SpvLinkageTypeExport: return "Export";
     case SpvLinkageTypeImport: return "Import";
     case SpvLinkageTypeLinkOnceODR: return "LinkOnceODR";
+    case SpvLinkageTypeWeakAMD: return "WeakAMD";
     default: return "Unknown";
     }
 }
@@ -4385,6 +4388,7 @@ inline const char* SpvCapabilityToString(SpvCapability value) {
     case SpvCapabilityDescriptorHeapEXT: return "DescriptorHeapEXT";
     case SpvCapabilityConstantDataKHR: return "ConstantDataKHR";
     case SpvCapabilityPoisonFreezeKHR: return "PoisonFreezeKHR";
+    case SpvCapabilityWeakLinkageAMD: return "WeakLinkageAMD";
     case SpvCapabilitySampleMaskOverrideCoverageNV: return "SampleMaskOverrideCoverageNV";
     case SpvCapabilityGeometryShaderPassthroughNV: return "GeometryShaderPassthroughNV";
     case SpvCapabilityShaderViewportIndexLayerEXT: return "ShaderViewportIndexLayerEXT";

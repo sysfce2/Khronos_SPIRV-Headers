@@ -485,6 +485,7 @@ namespace Spv
             Export = 0,
             Import = 1,
             LinkOnceODR = 2,
+            WeakAMD = 3,
             Max = 0x7fffffff,
         }
 
@@ -1238,6 +1239,7 @@ namespace Spv
             DescriptorHeapEXT = 5128,
             ConstantDataKHR = 5146,
             PoisonFreezeKHR = 5156,
+            WeakLinkageAMD = 5181,
             SampleMaskOverrideCoverageNV = 5249,
             GeometryShaderPassthroughNV = 5251,
             ShaderViewportIndexLayerEXT = 5254,

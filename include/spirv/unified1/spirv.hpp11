@@ -471,6 +471,7 @@ enum class LinkageType : unsigned {
     Export = 0,
     Import = 1,
     LinkOnceODR = 2,
+    WeakAMD = 3,
     Max = 0x7fffffff,
 };
 
@@ -1204,6 +1205,7 @@ enum class Capability : unsigned {
     DescriptorHeapEXT = 5128,
     ConstantDataKHR = 5146,
     PoisonFreezeKHR = 5156,
+    WeakLinkageAMD = 5181,
     SampleMaskOverrideCoverageNV = 5249,
     GeometryShaderPassthroughNV = 5251,
     ShaderViewportIndexLayerEXT = 5254,
@@ -3889,6 +3891,7 @@ inline const char* LinkageTypeToString(LinkageType value) {
     case LinkageType::Export: return "Export";
     case LinkageType::Import: return "Import";
     case LinkageType::LinkOnceODR: return "LinkOnceODR";
+    case LinkageType::WeakAMD: return "WeakAMD";
     default: return "Unknown";
     }
 }
@@ -4381,6 +4384,7 @@ inline const char* CapabilityToString(Capability value) {
     case Capability::DescriptorHeapEXT: return "DescriptorHeapEXT";
     case Capability::ConstantDataKHR: return "ConstantDataKHR";
     case Capability::PoisonFreezeKHR: return "PoisonFreezeKHR";
+    case Capability::WeakLinkageAMD: return "WeakLinkageAMD";
     case Capability::SampleMaskOverrideCoverageNV: return "SampleMaskOverrideCoverageNV";
     case Capability::GeometryShaderPassthroughNV: return "GeometryShaderPassthroughNV";
     case Capability::ShaderViewportIndexLayerEXT: return "ShaderViewportIndexLayerEXT";
