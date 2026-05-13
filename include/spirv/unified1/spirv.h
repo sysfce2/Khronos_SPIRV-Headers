@@ -209,6 +209,7 @@ typedef enum SpvExecutionMode_ {
     SpvExecutionModeSchedulerTargetFmaxMhzINTEL = 5903,
     SpvExecutionModeMaximallyReconvergesKHR = 6023,
     SpvExecutionModeFPFastMathDefault = 6028,
+    SpvExecutionModeOpacityMicromapIdKHR = 6031,
     SpvExecutionModeStreamingInterfaceINTEL = 6154,
     SpvExecutionModeRegisterMapInterfaceINTEL = 6160,
     SpvExecutionModeNamedBarrierCountINTEL = 6417,
@@ -1274,6 +1275,7 @@ typedef enum SpvCapability_ {
     SpvCapabilityDemoteToHelperInvocationEXT = 5379,
     SpvCapabilityDisplacementMicromapNV = 5380,
     SpvCapabilityRayTracingOpacityMicromapEXT = 5381,
+    SpvCapabilityRayTracingOpacityMicromapKHR = 5381,
     SpvCapabilityShaderInvocationReorderNV = 5383,
     SpvCapabilityShaderInvocationReorderEXT = 5388,
     SpvCapabilityBindlessTextureNV = 5390,
@@ -1368,6 +1370,7 @@ typedef enum SpvCapability_ {
     SpvCapabilityGroupNonUniformRotateKHR = 6026,
     SpvCapabilityFloatControls2 = 6029,
     SpvCapabilityFMAKHR = 6030,
+    SpvCapabilityRayTracingOpacityMicromapExecutionModeKHR = 6032,
     SpvCapabilityAtomicFloat32AddEXT = 6033,
     SpvCapabilityAtomicFloat64AddEXT = 6034,
     SpvCapabilityLongCompositesINTEL = 6089,
@@ -1428,6 +1431,7 @@ typedef enum SpvRayFlagsShift_ {
     SpvRayFlagsSkipTrianglesKHRShift = 8,
     SpvRayFlagsSkipAABBsKHRShift = 9,
     SpvRayFlagsForceOpacityMicromap2StateEXTShift = 10,
+    SpvRayFlagsForceOpacityMicromap2StateKHRShift = 10,
     SpvRayFlagsMax = 0x7fffffff,
 } SpvRayFlagsShift;
 
@@ -1445,6 +1449,7 @@ typedef enum SpvRayFlagsMask_ {
     SpvRayFlagsSkipTrianglesKHRMask = 0x00000100,
     SpvRayFlagsSkipAABBsKHRMask = 0x00000200,
     SpvRayFlagsForceOpacityMicromap2StateEXTMask = 0x00000400,
+    SpvRayFlagsForceOpacityMicromap2StateKHRMask = 0x00000400,
 } SpvRayFlagsMask;
 
 typedef enum SpvRayQueryIntersection_ {
@@ -3696,6 +3701,7 @@ inline const char* SpvExecutionModeToString(SpvExecutionMode value) {
     case SpvExecutionModeSchedulerTargetFmaxMhzINTEL: return "SchedulerTargetFmaxMhzINTEL";
     case SpvExecutionModeMaximallyReconvergesKHR: return "MaximallyReconvergesKHR";
     case SpvExecutionModeFPFastMathDefault: return "FPFastMathDefault";
+    case SpvExecutionModeOpacityMicromapIdKHR: return "OpacityMicromapIdKHR";
     case SpvExecutionModeStreamingInterfaceINTEL: return "StreamingInterfaceINTEL";
     case SpvExecutionModeRegisterMapInterfaceINTEL: return "RegisterMapInterfaceINTEL";
     case SpvExecutionModeNamedBarrierCountINTEL: return "NamedBarrierCountINTEL";
@@ -4505,6 +4511,7 @@ inline const char* SpvCapabilityToString(SpvCapability value) {
     case SpvCapabilityGroupNonUniformRotateKHR: return "GroupNonUniformRotateKHR";
     case SpvCapabilityFloatControls2: return "FloatControls2";
     case SpvCapabilityFMAKHR: return "FMAKHR";
+    case SpvCapabilityRayTracingOpacityMicromapExecutionModeKHR: return "RayTracingOpacityMicromapExecutionModeKHR";
     case SpvCapabilityAtomicFloat32AddEXT: return "AtomicFloat32AddEXT";
     case SpvCapabilityAtomicFloat64AddEXT: return "AtomicFloat64AddEXT";
     case SpvCapabilityLongCompositesINTEL: return "LongCompositesINTEL";
